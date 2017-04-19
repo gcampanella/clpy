@@ -1,0 +1,14 @@
+language: python
+python:
+  - 3.4
+  - 3.5
+  - 3.6
+addons:
+  apt:
+    packages:
+      - coinor-libclp-dev
+install:
+  - pip install -U pip setuptools wheel Cython
+script:
+  - python setup.py install
+  - python setup.py test
