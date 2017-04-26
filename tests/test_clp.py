@@ -23,9 +23,9 @@ class TestClp(unittest.TestCase):
             [5, 2, 4]
         ], dtype=np.double, order='F')
         col_lb = np.zeros(3, dtype=np.double)
-        col_ub = np.repeat(clp.PLUS_INFINITY, 3)
+        col_ub = np.repeat(clp.INFINITY, 3)
         obj = np.array([20, 10, 15], dtype=np.double)
-        row_lb = np.repeat(clp.MINUS_INFINITY, 4)
+        row_lb = np.repeat(-clp.INFINITY, 4)
         row_ub = np.array([55, 26, 30, 57], dtype=np.double)
         solver = clp.Clp(x, col_lb, col_ub, obj, row_lb, row_ub)
         solver.set_log_level(clp.LogLevel.NONE)
