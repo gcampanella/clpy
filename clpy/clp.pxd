@@ -5,7 +5,6 @@ from .clp_interface cimport *
 
 cdef extern from '<float.h>' nogil:
     double DBL_MAX
-    double DBL_MIN
 
 cpdef enum LogLevel:
     NONE = 0

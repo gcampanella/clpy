@@ -2,9 +2,7 @@ import numpy as np
 cimport numpy as np
 
 
-MINUS_INFINITY = DBL_MIN
-
-PLUS_INFINITY = DBL_MAX
+INFINITY = DBL_MAX
 
 
 cdef class Clp:
