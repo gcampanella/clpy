@@ -9,6 +9,7 @@ def readme():
     with open('README.rst') as f:
         return f.read()
 
+
 setup(
     name='clpy',
     version='0.1',
