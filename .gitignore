@@ -1,8 +1,9 @@
-*.py[cod]
-*.c
-*.so
 build/
 dist/
-.eggs/
+.cache/
 *.egg-info/
+.eggs/
 .idea/
+*.c
+*.pyc
+*.so
