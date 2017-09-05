@@ -1,1 +1,2 @@
-include README.rst
+include MANIFEST.in README.rst
+recursive-include clpy *.pyx *.pxd *.c
