@@ -1,6 +1,3 @@
-import numpy as np
-cimport numpy as np
-
 from .clp_interface cimport *
 
 cdef extern from '<float.h>' nogil:
@@ -55,15 +52,15 @@ cdef class Clp:
     cpdef double primal_tolerance(self)
     cpdef void set_primal_tolerance(self, double tolerance)
 
-    cpdef np.ndarray[np.double_t, ndim=1] reduced_costs(self)
+    cpdef double[:] reduced_costs(self)
 
-    cpdef np.ndarray[np.double_t, ndim=1] row_activities(self)
+    cpdef double[:] row_activities(self)
 
     cpdef Scaling scaling(self)
     cpdef void set_scaling(self, Scaling mode)
 
-    cpdef np.ndarray[np.double_t, ndim=1] shadow_prices(self)
+    cpdef double[:] shadow_prices(self)
 
-    cpdef np.ndarray[np.double_t, ndim=1] solution(self)
+    cpdef double[:] solution(self)
 
     cpdef Status status(self)
