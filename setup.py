@@ -32,6 +32,7 @@ setup(
         'Topic :: Scientific/Engineering :: Mathematics'
     ],
     packages=['clpy'],
+    package_data={'clpy': ['*.pxd']},
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     ext_modules=cythonize(
