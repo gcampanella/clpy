@@ -1,7 +1,8 @@
 `clpy`
 ------
 
-[![Build Status](https://travis-ci.org/gcampanella/clpy.svg?branch=master)](https://travis-ci.org/gcampanella/clpy)
+.. image:: https://travis-ci.org/gcampanella/clpy.svg?branch=master
+    :target: https://travis-ci.org/gcampanella/clpy
 
 `clpy` provides a low-level Cython_ binding to the Clp_ linear programming solver.
 
