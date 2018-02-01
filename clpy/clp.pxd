@@ -22,6 +22,14 @@ cpdef enum Scaling:
     DYNAMIC = 4
 
 cpdef enum Status:
+    FREE = 0
+    BASIC = 1
+    AT_UPPER_BOUND = 2
+    AT_LOWER_BOUND = 3
+    SUPER_BASIC = 4
+    FIXED = 5
+
+cpdef enum ProblemStatus:
     OPTIMAL = 0
     PRIMAL_INFEASIBLE = 1
     DUAL_INFEASIBLE = 2
@@ -63,4 +71,6 @@ cdef class Clp:
 
     cpdef double[:] solution(self)
 
-    cpdef Status status(self)
+    cpdef ProblemStatus status(self)
+    cpdef Status column_status(self, int index)
+    cpdef Status row_status(self, int index)

@@ -34,6 +34,8 @@ cdef extern from 'coin/Clp_C_Interface.h' nogil:
     int Clp_initialDualSolve(Clp_Simplex *model)
 
     int Clp_status(Clp_Simplex *model)
+    int Clp_getColumnStatus(Clp_Simplex *model, int index)
+    int Clp_getRowStatus(Clp_Simplex *model, int index)
 
     double Clp_objectiveValue(Clp_Simplex *model)
 

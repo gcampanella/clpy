@@ -21,7 +21,7 @@ class TestClp(unittest.TestCase):
         solver.set_log_level(clpy.LogLevel.NONE)
         solver.set_optimization_direction(clpy.OptimizationDirection.MAXIMIZE)
         solver.initial_solve()
-        np.testing.assert_equal(solver.status(), int(clpy.Status.OPTIMAL))
+        np.testing.assert_equal(solver.status(), int(clpy.ProblemStatus.OPTIMAL))
         np.testing.assert_almost_equal(solver.objective_value(), 268.0)
         np.testing.assert_almost_equal(solver.solution(), [1.8, 20.8, 1.6])
         np.testing.assert_almost_equal(solver.reduced_costs(), np.zeros(3))

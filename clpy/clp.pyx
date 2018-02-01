@@ -80,8 +80,14 @@ cdef class Clp:
     cpdef double[:] solution(self):
         return <double[:self._n_variables]> Clp_primalColumnSolution(self._model)
 
-    cpdef Status status(self):
-        return Status(Clp_status(self._model))
+    cpdef ProblemStatus status(self):
+        return ProblemStatus(Clp_status(self._model))
+
+    cpdef Status column_status(self, int index):
+        return Status(Clp_getColumnStatus(self._model, index))
+
+    cpdef Status row_status(self, int index):
+        return Status(Clp_getRowStatus(self._model, index))
 
 
 cdef int32_t[:] compute_col_starts(int n_constraints, int n_variables):
