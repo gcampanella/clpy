@@ -26,8 +26,11 @@ cdef class Clp:
         if self._model is not NULL:
             Clp_deleteModel(self._model)
 
-    cpdef void initial_solve(self):
-        Clp_initialDualSolve(self._model)
+    cpdef void initial_solve(self, bint dual=False):
+        if dual:
+            Clp_initialDualSolve(self._model)
+        else:
+            Clp_initialPrimalSolve(self._model)
 
     cpdef double dual_tolerance(self):
         return Clp_dualTolerance(self._model)

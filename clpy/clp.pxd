@@ -41,7 +41,7 @@ cdef class Clp:
     cdef int _n_constraints
     cdef int _n_variables
 
-    cpdef void initial_solve(self)
+    cpdef void initial_solve(self, bint dual=*)
 
     cpdef double dual_tolerance(self)
     cpdef void set_dual_tolerance(self, double tolerance)
